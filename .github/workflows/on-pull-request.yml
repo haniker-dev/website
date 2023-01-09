@@ -1,4 +1,4 @@
-name: Deploy to Firebase Hosting Preview on PR
+name: PR Deploy Preview
 "on": pull_request
 jobs:
   deploy-preview:
