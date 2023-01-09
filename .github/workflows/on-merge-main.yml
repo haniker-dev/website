@@ -4,12 +4,9 @@ name: Deploy to Firebase Hosting on merge
     branches:
       - main
 jobs:
-  build:
-    uses: ./.github/workflows/build.yml
-
   deploy-production:
-    needs: build
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout branch
         uses: actions/checkout@v2
