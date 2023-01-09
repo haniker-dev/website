@@ -14,6 +14,7 @@ ci-build: FORCE ## Build the app in CI
 	rm -rf dist
 	mkdir -p dist 
 	cp public/index.html dist/ 
+	which spago
 	spago bundle-app --to dist/index.js 
 	parcel build dist/index.html 
 
