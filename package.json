@@ -1,0 +1,26 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "echo Use Makefile && exit 1",
+    "test": "echo Use Makefile && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haniker-dev/website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haniker-dev/website/issues"
+  },
+  "homepage": "https://github.com/haniker-dev/website#readme",
+  "devDependencies": {
+    "esbuild": "^0.16.16",
+    "firebase-tools": "^11.20.0",
+    "parcel": "^2.8.2",
+    "purescript": "^0.15.7",
+    "spago": "^0.20.9"
+  }
+}

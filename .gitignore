@@ -1,3 +1,8 @@
+.spago
+.parcel-cache
+dist
+output
+
 # Logs
 logs
 *.log
