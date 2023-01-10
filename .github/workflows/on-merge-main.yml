@@ -25,3 +25,12 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_HANIKER_WEBSITE }}"
           channelId: live
           projectId: haniker-website
+
+      - name: Running Page Speed Insights
+        uses: jakepartusch/psi-action@v1.3
+        id: psi
+        with:
+          url: "https://www.haniker.dev"
+          threshold: 90
+          strategy: mobile
+          key: ${{ secrets.PAGE_SPEED_API_KEY }}
