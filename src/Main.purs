@@ -21,7 +21,7 @@ data Action = Increment
 component :: forall q i o m. H.Component q i o m
 component =
   H.mkComponent
-    { initialState: \_ -> { count: 0 }
+    { initialState: \_ -> { count: 2 }
     , render
     , eval: H.mkEval H.defaultEval { handleAction = handleAction }
     }
