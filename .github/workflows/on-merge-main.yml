@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: "16.x"
           build-dir: "dist"
-          entry-html: "public/index.html"
+          public-dir: "public"
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
