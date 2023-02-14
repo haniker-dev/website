@@ -10,6 +10,10 @@ FORCE: # Used as a way to force certain receipe to always run
 build: FORCE ## Build the app locally
 	spago build
 
+rebuild: FORCE ## Rebuild the app locally
+	rm -rf output
+	spago build
+
 ci-build: FORCE ## Build the app in CI
 	rm -rf dist
 	mkdir -p dist 
