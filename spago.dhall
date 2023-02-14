@@ -11,7 +11,8 @@ When creating a new Spago project, you can use
 to generate this file without the comments in this block.
 -}
 { name = "haniker-web"
-, dependencies = [ "console", "effect", "halogen", "prelude" ]
+, dependencies =
+  [ "arrays", "console", "debug", "effect", "halogen", "newtype", "prelude" ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
 }
