@@ -28,6 +28,7 @@ module Theme
   , text_base
   , text_center
   , text_white_over_70
+  , themeClassGen
   , w_full
   ) where
 
@@ -37,6 +38,8 @@ import Data.Array (fold, foldl)
 import Debug as Debug
 import Halogen.HTML (ClassName(..), IProp)
 import Halogen.HTML.Properties (class_)
+import Test.QuickCheck.Arbitrary (arbitrary)
+import Test.QuickCheck.Gen (Gen)
 
 -- Sample usage of Tailwind CSS:
 -- "relative isolate min-h-full"
@@ -171,3 +174,6 @@ deadCSSCode =
   in
     ThemeClass "deadCSSCode"
 
+-- For testing purposes
+themeClassGen :: Gen ThemeClass
+themeClassGen = ThemeClass <$> arbitrary

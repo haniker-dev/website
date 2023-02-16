@@ -12,7 +12,19 @@ to generate this file without the comments in this block.
 -}
 { name = "haniker-web"
 , dependencies =
-  [ "arrays", "console", "debug", "effect", "halogen", "newtype", "prelude" ]
+  [ "aff"
+  , "arrays"
+  , "console"
+  , "debug"
+  , "effect"
+  , "halogen"
+  , "newtype"
+  , "prelude"
+  , "quickcheck"
+  , "quickcheck-laws"
+  , "spec"
+  , "spec-discovery"
+  ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
 }
