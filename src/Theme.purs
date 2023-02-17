@@ -4,9 +4,12 @@ module Theme
   , absolute
   , css
   , deadCSSCode
+  , font_bold
+  , font_semibold
   , h_full
   , inset_0
   , isolate
+  , leading_8
   , lg
   , max_w_7xl
   , min_h_full
@@ -25,10 +28,14 @@ module Theme
   , sm''mt_6
   , sm'_mt_6
   , sm__mt_6
+  , text_3xl
+  , text_5xl
   , text_base
   , text_center
+  , text_white
   , text_white_over_70
   , themeClassGen
+  , tracking_tight
   , w_full
   ) where
 
@@ -122,20 +129,41 @@ py_32 = ThemeClass "py-32"
 py_40 :: ThemeClass
 py_40 = ThemeClass "py-40"
 
-text_center :: ThemeClass
-text_center = ThemeClass "text-center"
-
 mt_4 :: ThemeClass
 mt_4 = ThemeClass "mt-4"
 
 mt_6 :: ThemeClass
 mt_6 = ThemeClass "mt-6"
 
+text_center :: ThemeClass
+text_center = ThemeClass "text-center"
+
 text_base :: ThemeClass
 text_base = ThemeClass "text-base"
 
+text_white :: ThemeClass
+text_white = ThemeClass "text-white"
+
 text_white_over_70 :: ThemeClass
 text_white_over_70 = ThemeClass "text-white/70"
+
+text_3xl :: ThemeClass
+text_3xl = ThemeClass "text-3xl"
+
+text_5xl :: ThemeClass
+text_5xl = ThemeClass "text-5xl"
+
+tracking_tight :: ThemeClass
+tracking_tight = ThemeClass "tracking-tight"
+
+leading_8 :: ThemeClass
+leading_8 = ThemeClass "leading-8"
+
+font_semibold :: ThemeClass
+font_semibold = ThemeClass "font-semibold"
+
+font_bold :: ThemeClass
+font_bold = ThemeClass "font-bold"
 
 -- Break points
 
