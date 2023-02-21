@@ -63,32 +63,11 @@ style =
       , sm [ text_5xl ]
       ]
   , description:
-      -- Array-based syntax like elm-css
-      -- We need to loop O(n) to create the final string
-      -- Possible invalid classes like sm [ lg [ mt_6 ] ]
-      -- We ignore overwritten CSS rules/classes
       [ mt_4
       , text_base
       , text_white_over_70
-      -- Breakpoint designed as an array
-      -- We need to loop to append "sm:" to each rule
       , sm
           [ mt_6
           ]
-      -- Breakpoint designed as a class to prevent additional looping
-      -- and also prevent any invalid nested breakpoints
-      -- Too verbose... we will ignore it
-      , sm__mt_6
-      , sm'_mt_6
-      , sm''mt_6
       ]
-  -- Performant? 
-  -- Harder to work with such as conditional adding of a class, debugging, ...
-  -- Hence, we discard this approach
-  -- description: do
-  --   mt_4
-  --   text_base
-  --   text_white_over_70
-  --   sm do 
-  --     mt_6
   }

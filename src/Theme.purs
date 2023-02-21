@@ -25,9 +25,6 @@ module Theme
   , py_40
   , relative
   , sm
-  , sm''mt_6
-  , sm'_mt_6
-  , sm__mt_6
   , text_3xl
   , text_5xl
   , text_base
@@ -165,20 +162,7 @@ font_semibold = ThemeClass "font-semibold"
 font_bold :: ThemeClass
 font_bold = ThemeClass "font-bold"
 
--- Break points
-
-{-| Class-based breakpoints -}
-sm__mt_6 :: ThemeClass
-sm__mt_6 = ThemeClass "sm:mt-6"
-
-sm'_mt_6 :: ThemeClass
-sm'_mt_6 = ThemeClass "sm:mt-6"
-
-sm''mt_6 :: ThemeClass
-sm''mt_6 = ThemeClass "sm:mt-6"
-
-{-| Array-based breakpoints 
--}
+-- Breakpoints 
 prefix :: String -> ThemeClass -> ThemeClass
 prefix _ (ThemeClass "") = mempty
 prefix p (ThemeClass a) = ThemeClass $ p <> a
