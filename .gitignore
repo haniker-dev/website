@@ -1,5 +1,6 @@
 .spago
 .parcel-cache
+.psc-ide-port
 dist
 output
 
