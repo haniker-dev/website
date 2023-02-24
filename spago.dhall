@@ -14,6 +14,7 @@ to generate this file without the comments in this block.
 , dependencies =
   [ "aff"
   , "arrays"
+  , "console"
   , "debug"
   , "effect"
   , "halogen"
@@ -22,6 +23,7 @@ to generate this file without the comments in this block.
   , "quickcheck-laws"
   , "spec"
   , "spec-discovery"
+  , "typelevel-prelude"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
