@@ -1,7 +1,7 @@
 module Page.Home where
 
 import Prelude
-import Tailwind (Theme, _z_10, absolute, css', font_bold, font_semibold, h_full, inset_0, isolate, leading_8, lg, max_w_7xl, min_h_full, mt_4, mt_6, mx_auto, object_cover, object_top, px_6, px_8, py_32, py_40, relative, sm, text_3xl, text_5xl, text_base, text_center, text_white, text_white_over_70, tracking_tight, w_full, (~))
+import Tailwind (Theme, _z_10, absolute, _css, font_bold, font_semibold, h_full, inset_0, isolate, leading_8, lg, max_w_7xl, min_h_full, mt_4, mt_6, mx_auto, object_cover, object_top, px_6, px_8, py_32, py_40, relative, sm, text_3xl, text_5xl, text_base, text_center, text_white, text_white_over_70, tracking_tight, w_full, (~))
 
 import Data.Symbol (class IsSymbol)
 import Halogen as H
@@ -21,6 +21,7 @@ render =
         ]
     ]
 
+-- TODO: Move this function to auto generate fn from TW package
 css :: ∀ a r i. IsSymbol a => Theme a -> IProp (class :: String | r) i
 css a = class_ $ ClassName $ show a
 
@@ -34,11 +35,11 @@ style
      }
 
 style =
-  { container: css'
+  { container: _css
       ~ relative
       ~ isolate
       ~ min_h_full
-  , img: css'
+  , img: _css
       ~ absolute
       ~ inset_0
       ~ _z_10
@@ -46,7 +47,7 @@ style =
       ~ w_full
       ~ object_cover
       ~ object_top
-  , body: css'
+  , body: _css
       ~ mx_auto
       ~ max_w_7xl
       ~ px_6
@@ -54,19 +55,19 @@ style =
       ~ text_center
       ~ sm py_40
       ~ lg px_8
-  , domain: css'
+  , domain: _css
       ~ text_base
       ~ font_semibold
       ~ leading_8
       ~ text_white
-  , wip: css'
+  , wip: _css
       ~ mt_4
       ~ text_3xl
       ~ font_bold
       ~ tracking_tight
       ~ text_white
       ~ sm text_5xl
-  , description: css'
+  , description: _css
       ~ mt_4
       ~ text_base
       ~ text_white_over_70
