@@ -2,7 +2,7 @@
 // Generated from `tailwindcss init --full`
 // which produces a full config file that is used internally by Tailwind
 module.exports = {
-  content: [],
+  content: ["./public/index.html", "./output/**/*.js"],
   presets: [],
   darkMode: "media", // or 'class'
   theme: {
