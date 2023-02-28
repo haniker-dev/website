@@ -103,4 +103,4 @@ let upstream =
         sha256:3e9fbc9ba03e9a1fcfd895f65e2d50ee2f5e86c4cd273f3d5c841b655a0e1bda
 
 in  upstream
-  with tailwind = ../purescript-tailwind/spago.dhall as Location
+  with tailwind = ../purescript-tailwind-css/spago.dhall as Location
