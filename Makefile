@@ -20,3 +20,6 @@ run-test: ## Run test locally
 server: ## Run a server locally
 	tailwindcss --input "" --output public/index.css --watch &
 	parcel public/index.html --open
+
+gen-tailwind: FORCE ## Generate Tailwind CSS functions
+	../purescript-tailwind-css/cli/purs-tailwind-css-dev.js --output ./gen-src
