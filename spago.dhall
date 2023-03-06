@@ -19,6 +19,7 @@ to generate this file without the comments in this block.
   , "spec"
   , "spec-discovery"
   , "tailwind"
+  , "typelevel-prelude"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "gen-src/**/*.purs", "test/**/*.purs" ]

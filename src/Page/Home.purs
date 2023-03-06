@@ -28,7 +28,7 @@ css a = class_ $ ClassName $ show a
 style
   :: { body :: Tw "mx-auto max-w-7xl px-6 py-32 text-center sm:py-40 lg:px-8"
      , container :: Tw "relative isolate min-h-full"
-     , description :: Tw "mt-4 text-base text-white-over-70 sm:mt-6"
+     , description :: Tw "mt-4 text-base text-white/70 sm:mt-6"
      , domain :: Tw "text-base font-semibold leading-8 text-white"
      , img :: Tw "absolute inset-0 -z-10 h-full w-full object-cover object-top"
      , wip :: Tw "mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl"
