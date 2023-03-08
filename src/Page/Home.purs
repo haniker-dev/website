@@ -1,13 +1,9 @@
 module Page.Home where
 
-import Prelude
-import Tailwind (Tw, _z_10, absolute, tw, font_bold, font_semibold, h_full, inset_0, isolate, leading_8, lg, max_w_7xl, min_h_full, mt_4, mt_6, mx_auto, object_cover, object_top, px_6, px_8, py_32, py_40, relative, sm, text_3xl, text_5xl, text_base, text_center, text_white, text_white_over_70, tracking_tight, w_full, (~))
+import Tailwind (Tw, css, _z_10, absolute, font_bold, font_semibold, h_full, inset_0, isolate, leading_8, lg, max_w_7xl, min_h_full, mt_4, mt_6, mx_auto, object_cover, object_top, px_6, px_8, py_32, py_40, relative, sm, text_3xl, text_5xl, text_base, text_center, text_white, text_white_over_70, tracking_tight, tw, w_full, (~))
 
-import Data.Symbol (class IsSymbol)
 import Halogen as H
-import Halogen.HTML (ClassName(..), IProp)
 import Halogen.HTML as HH
-import Halogen.HTML.Properties (class_)
 import Halogen.HTML.Properties as HP
 
 render :: forall a cs m. H.ComponentHTML a cs m
@@ -21,10 +17,6 @@ render =
         ]
     ]
 
--- TODO: Move this function to auto generate fn from TW package
-css :: ∀ a r i. IsSymbol a => Tw a -> IProp (class :: String | r) i
-css a = class_ $ ClassName $ show a
-
 style
   :: { body :: Tw "mx-auto max-w-7xl px-6 py-32 text-center sm:py-40 lg:px-8"
      , container :: Tw "relative isolate min-h-full"
@@ -33,7 +25,6 @@ style
      , img :: Tw "absolute inset-0 -z-10 h-full w-full object-cover object-top"
      , wip :: Tw "mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl"
      }
-
 style =
   { container: tw
       ~ relative
