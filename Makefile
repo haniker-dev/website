@@ -10,16 +10,16 @@ FORCE: # Used as a way to force certain receipe to always run
 build: FORCE ## Build the app locally
 	spago build
 
-ci-build: FORCE ## Build the app in CI
-	rm -rf dist
-	mkdir -p dist 
-	cp public/index.html dist/ 
-	which spago
-	spago bundle-app --to dist/index.js 
-	parcel build dist/index.html 
+rebuild: FORCE ## Rebuild the app locally
+	rm -rf output
+	spago build
 
 run-test: ## Run test locally
 	spago test
 
 server: ## Run a server locally
-	parcel public/index.html --open
+	parcel public/index.html --open &
+	tailwindcss --output public/index.css --watch
+
+gen-tailwind: FORCE ## Generate Tailwind CSS functions
+	../purescript-tailwind-css/cli/purs-tailwind-css-dev.js --output ./gen-src --target halogen
