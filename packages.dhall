@@ -103,4 +103,32 @@ let upstream =
         sha256:3e9fbc9ba03e9a1fcfd895f65e2d50ee2f5e86c4cd273f3d5c841b655a0e1bda
 
 in  upstream
-  with tailwind = ../purescript-tailwind-css/spago.dhall as Location
+  with tailwind-css =
+    { dependencies =
+      [ "aff"
+      , "argparse-basic"
+      , "arrays"
+      , "console"
+      , "effect"
+      , "either"
+      , "foldable-traversable"
+      , "halogen"
+      , "halogen-vdom"
+      , "integers"
+      , "maybe"
+      , "newtype"
+      , "node-buffer"
+      , "node-fs"
+      , "node-fs-aff"
+      , "node-path"
+      , "node-process"
+      , "prelude"
+      , "spec"
+      , "spec-discovery"
+      , "strings"
+      , "typelevel-prelude"
+      , "unsafe-coerce"
+      ]
+    , repo = "https://github.com/haniker-dev/purescript-tailwind-css"
+    , version = "e68d82e7b616bb846ac9b24db7dc4858aff818c6"
+    }

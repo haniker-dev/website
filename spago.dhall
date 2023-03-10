@@ -18,7 +18,7 @@ to generate this file without the comments in this block.
   , "prelude"
   , "spec"
   , "spec-discovery"
-  , "tailwind"
+  , "tailwind-css"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "gen-src/**/*.purs", "test/**/*.purs" ]

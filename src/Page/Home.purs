@@ -1,10 +1,9 @@
 module Page.Home where
 
-import Tailwind (Tw, css, _z_10, absolute, font_bold, font_semibold, h_full, inset_0, isolate, leading_8, lg, max_w_7xl, min_h_full, mt_4, mt_6, mx_auto, object_cover, object_top, px_6, px_8, py_32, py_40, relative, sm, text_3xl, text_5xl, text_base, text_center, text_white, text_white_over_70, tracking_tight, tw, w_full, (~))
-
 import Halogen as H
 import Halogen.HTML as HH
 import Halogen.HTML.Properties as HP
+import Tailwind
 
 render :: forall a cs m. H.ComponentHTML a cs m
 render =
@@ -17,14 +16,7 @@ render =
         ]
     ]
 
-style
-  :: { body :: Tw "mx-auto max-w-7xl px-6 py-32 text-center sm:py-40 lg:px-8"
-     , container :: Tw "relative isolate min-h-full"
-     , description :: Tw "mt-4 text-base text-white/70 sm:mt-6"
-     , domain :: Tw "text-base font-semibold leading-8 text-white"
-     , img :: Tw "absolute inset-0 -z-10 h-full w-full object-cover object-top"
-     , wip :: Tw "mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl"
-     }
+style :: _
 style =
   { container: tw
       ~ relative
